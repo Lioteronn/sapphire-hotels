@@ -4,7 +4,13 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        bitter: ['Bitter', 'serif'],
+        libre: ['Libre Baskerville', 'serif'],
+        worksans: ['Work Sans', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
