@@ -1,6 +1,7 @@
 import React from 'react';
 import BookingProgressBar from './BookingProgressBar';
 import NavigationBar from './NavigationBar';
+import {useNavigate} from "react-router-dom";
 
 const SpecialRequestsForm = () => {
     return (
@@ -17,6 +18,12 @@ const SpecialRequestsForm = () => {
 }
 
 const SpecialRequests = () => {
+    const navigate = useNavigate();
+
+    const handleContinueToPayment = () => {
+        navigate('/payment');
+    };
+
     return (
         <div className="p-10 bg-gray-50 w-full max-w-2xl mx-auto rounded-lg shadow-lg">
             <h2 className="text-xl font-semibold mb-6 text-center">
@@ -67,6 +74,7 @@ const SpecialRequests = () => {
                 </label>
             </form>
             <button
+                onClick={handleContinueToPayment}
                 type="submit"
                 className="mt-8 w-full py-3 bg-black text-white text-base font-medium rounded hover:bg-gray-800"
             >

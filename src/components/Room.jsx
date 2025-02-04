@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 const Room = ({ title, size, capacity, description, price, image }) => {
+    const navigate = useNavigate();
+
+    const handleReserve = () => {
+        navigate('/special-requests');
+    };
+
     return (
         <div className="flex p-6 bg-white border rounded-none shadow-md mb-4">
             <div className="w-1/3 border-2 border-gray-400 pb-3">
@@ -15,7 +23,12 @@ const Room = ({ title, size, capacity, description, price, image }) => {
                 <p className="mt-2 font-worksans">Tamaño: {size}</p>
                 <p className="mt-2 font-worksans">Capacidad: {capacity}</p>
                 <p className="mt-2 font-worksans">{description}</p>
-                <button className="mt-4 px-4 py-2 bg-black text-white rounded rounded-none">RESERVAR</button>
+                <button
+                    onClick={handleReserve}
+                    className="mt-4 px-4 py-2 bg-black text-white rounded rounded-none"
+                >
+                    RESERVAR
+                </button>
             </div>
         </div>
     );

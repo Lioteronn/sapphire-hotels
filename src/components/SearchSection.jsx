@@ -19,7 +19,7 @@ const SearchDropdown = ({ placeholder, options }) => {
     return (
         <div className="flex-1">
             <select
-                className="w-full pl-3 pt-2.5 pb-2.5 font-semibold italic bg-white bg-opacity-90 border-black border-2 rounded appearance-none"
+                className="w-full pl-3 pt-2.5 pb-2.5 font-semibold italic bg-white border-black border-2 rounded appearance-none"
                 style={{
                     backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M5.5 7.5L10 12l4.5-4.5H5.5z"/></svg>')`,
                     backgroundRepeat: 'no-repeat',
@@ -46,7 +46,7 @@ const DateSelector = () => {
         <div className="flex-1">
             <input
                 type="date"
-                className="w-full pl-3 pt-2.5 pb-2.5 font-semibold italic bg-white bg-opacity-90 border-black border-2 rounded"
+                className="w-full pl-3 pt-2.5 pb-2.5 font-semibold italic pr-2 border-black border-2 rounded"
             />
         </div>
     );

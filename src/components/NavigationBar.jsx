@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,10 +24,9 @@ const NavigationBar = () => {
                 style={{ width: '250px' }}
             >
                 <CloseButton onClick={toggleMenu} />
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/special-requests">Special Requests</a></li>
-                    {/* Add more menu items here */}
+                <ul className="space-y-4 mt-8">
+                    <li><Link to="/" className="text-lg hover:text-gray-300 transition">Home</Link></li>
+                    <li><Link to="/special-requests" className="text-lg hover:text-gray-300 transition">Special Requests</Link></li>
                 </ul>
             </div>
         </nav>
@@ -67,18 +67,18 @@ const CloseButton = ({ onClick }) => {
 
 const ReservationButton = () => {
     return (
-        <button className="text-lg">RESERVAR</button>
+        <Link to="/register" className="text-lg hover:text-gray-300 transition">RESERVAR</Link>
     );
 };
 
 const LoginButton = () => {
     return (
-        <div className="flex items-center gap-2 mr-2 cursor-pointer">
+        <Link to="/login" className="flex items-center gap-2 mr-2 cursor-pointer hover:text-gray-300 transition">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
             <span className="text-lg">ACCESO</span>
-        </div>
+        </Link>
     );
 };
 

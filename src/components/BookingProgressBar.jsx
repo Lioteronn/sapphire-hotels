@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const BookingProgressBar = ({ currentStep }) => {
     const navigate = useNavigate();
     const steps = [
-        { number: 1, label: 'Destino', path: '/' },
+        { number: 1, label: 'Destino', path: '/destinies' },
         { number: 2, label: 'Habitaciones y tarifas', path: '/rooms' },
         { number: 3, label: 'Peticiones especiales', path: '/special-requests' },
         { number: 4, label: 'Confirmar', path: '/confirm' }
